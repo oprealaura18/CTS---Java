@@ -1,5 +1,6 @@
 package ro.ase.cts.program;
 
+import ro.ase.cts.clase.LibrarieDepozit;
 import ro.ase.cts.clase.ManagerSpital;
 import ro.ase.cts.clase.ManagerSpitalLazy;
 
@@ -23,7 +24,17 @@ public class Main {
 		
 		System.out.println(managerLazy1.toString());
 		System.out.println(managerLazy2.toString());
-	
+		
+		//ex eu
+		
+		LibrarieDepozit librarieDepozit1 = LibrarieDepozit.getInstance(5, "ALba ca Zapada", 120);
+		LibrarieDepozit librarieDepozit2 = LibrarieDepozit.getInstance(7, "Cenusareasa", 111);
+		
+		librarieDepozit1.setDenumire("Nume nou");
+		librarieDepozit2.setPret(66);
+		
+		System.out.println(librarieDepozit1.toString());
+		System.out.println(librarieDepozit2.toString());
 	}
 
 }
