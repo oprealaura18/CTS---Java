@@ -2,6 +2,7 @@ package ro.ase.cts.decorator.program;
 
 import ro.ase.cts.decorator.clase.Bilet;
 import ro.ase.cts.decorator.clase.DecoratorCuMesajSustinere;
+import ro.ase.cts.decorator.clase.DecoratorMesajLMA;
 
 public class Program {
 
@@ -10,6 +11,11 @@ public class Program {
 		bilet.rezervaBilet();
 		DecoratorCuMesajSustinere decorator = new DecoratorCuMesajSustinere(bilet);
 		decorator.rezervaBilet();
+		
+		DecoratorMesajLMA decorator2 = new DecoratorMesajLMA(bilet);
+		System.out.println("A doua decorare");
+		
+		decorator2.rezervaBilet();
 
 	}
 
