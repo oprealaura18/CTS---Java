@@ -10,7 +10,8 @@ public class Program {
 
 		
 		//8
-		ComponentaMeniu meniu = new Sectiune("Meniu");
+ComponentaMeniu meniu = new Sectiune("Meniu");
+		
 		ComponentaMeniu sectiuneBauturi = new Sectiune("Bauturi");
 		ComponentaMeniu sectiuneDesert = new Sectiune("Desert");
 		
@@ -18,12 +19,20 @@ public class Program {
 		ComponentaMeniu clatite = new Item("Clatite");
 		ComponentaMeniu cola = new Item("Cola");
 		
-		meniu.adaugareNod(sectiuneDesert);
 		meniu.adaugareNod(sectiuneBauturi);
+		meniu.adaugareNod(sectiuneDesert);
 		
 		sectiuneBauturi.adaugareNod(frappe);
 		sectiuneBauturi.adaugareNod(cola);
+		
 		sectiuneDesert.adaugareNod(clatite);
+		
+		meniu.afiseazaInformatii();
+		
+		System.out.println("-----------------------------");
+		
+		sectiuneBauturi.stergeNod(frappe);
+		sectiuneDesert.adaugareNod(frappe);
 		
 		meniu.afiseazaInformatii();
 
